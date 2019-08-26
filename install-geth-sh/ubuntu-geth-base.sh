@@ -5,3 +5,4 @@ sudo apt-get install ethereum
 
 sudo apt-get install -y build-essential
 
+sudo apt install golang-go 
