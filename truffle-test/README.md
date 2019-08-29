@@ -47,5 +47,14 @@ https://rinkeby.etherscan.io/
 
 - 8. 토큰 보내고 받기.
 
-- Truffle 에서 ABI 를 extract 하기 위해서, https://github.com/trustfarm-dev/truffle-export-abi 참조할것
+- 방법1) Truffle 에서 ABI 를 extract 하기 위해서, https://github.com/trustfarm-dev/truffle-export-abi 참조할것
 
+- 방법2) ABI 만 간략하게 뽑고 싶을경우는 , 
+build/contract/xxxx.json  에서 "abi" 섹션을 사용하면 된다.
+
+https://medium.com/@piyopiyo/how-to-get-contract-abi-in-truffle-22d0c0457ceb 참조:
+```
+const fs = require('fs');
+const contract = JSON.parse(fs.readFileSync('./build/contracts/ExampleSmartContract.json', 'utf8'));
+console.log(JSON.stringify(contract.abi));
+```
